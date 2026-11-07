@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,254 +7,687 @@
 
 <title>TourCaptain | Explore More, Spend Less</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Explore affordable holiday packages with TourCaptain. Discover Darjeeling, Sikkim, Kashmir and more. Your trusted travel companion.">
+<meta name="keywords" content="TourCaptain, travel agency, holiday packages, Darjeeling tour, Sikkim tour, Kashmir tour, India travel">
+<meta name="author" content="TourCaptain">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="TourCaptain | Explore More, Spend Less">
+<meta property="og:description" content="Discover unforgettable journeys with TourCaptain.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+:root {
+    --navy: #0a2540;
+    --dark: #061829;
+    --gold: #ffd700;
+    --light: #f7fafc;
+    --green: #25D366;
 }
 
-body{
-    background:#f7fafc;
-    color:#333;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
-header{
-    background:#0a2540;
-    color:white;
-    padding:20px 0;
-    position:sticky;
-    top:0;
-    z-index:100;
+body {
+    background: var(--light);
+    color: #333;
+    line-height: 1.7;
 }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:700;
-    color:#ffd700;
+section {
+    scroll-margin-top: 85px;
 }
 
-.nav-links a{
-    color:white;
-    margin-left:20px;
-    text-decoration:none;
+.section {
+    padding: 85px 0;
 }
 
-.hero{
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 45px;
+}
+
+/* HEADER */
+
+header {
+    background: var(--navy);
+    color: white;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.15);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-book {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+/* HAMBURGER MENU */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
     background:
-    linear-gradient(rgba(10,37,64,0.8),rgba(10,37,64,0.8)),
-    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600');
+    linear-gradient(rgba(10,37,64,.65),rgba(10,37,64,.75)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1800');
 
-    background-size:cover;
-    background-position:center;
-    color:white;
-    text-align:center;
-    padding:120px 20px;
+    background-size: cover;
+    background-position: center;
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
 }
 
-.hero h1{
-    font-size:55px;
-    margin-bottom:20px;
+.hero-content {
+    max-width: 850px;
 }
 
-.hero p{
-    font-size:22px;
-    margin-bottom:30px;
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
 }
 
-.btn{
-    display:inline-block;
-    background:#ffd700;
-    color:#0a2540;
-    padding:14px 30px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
-.section{
-    padding:80px 0;
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 13px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
 }
 
-.section-title{
-    text-align:center;
-    font-size:38px;
-    margin-bottom:50px;
-    color:#0a2540;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
 }
 
-.destinations{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    margin-left: 10px;
 }
 
-.card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
+/* DESTINATIONS */
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
 }
 
-.card:hover{
-    transform:translateY(-8px);
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
 }
 
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    display:block;
+.card:hover {
+    transform: translateY(-8px);
 }
 
-.card-content{
-    padding:20px;
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
 }
 
-.card-content h3{
-    color:#0a2540;
-    margin-bottom:10px;
+.card-content {
+    padding: 22px;
 }
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+.card-content h3 {
+    color: var(--navy);
+    margin-bottom: 8px;
 }
 
-.feature-box{
-    text-align:center;
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+/* ABOUT */
+
+.about {
+    background: #eef4ff;
 }
 
-.packages{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
 }
 
-.package{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+.about-image img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
 }
 
-.package h3{
-    color:#0a2540;
-    margin-bottom:10px;
+.about-text h2 {
+    font-size: 34px;
+    color: var(--navy);
+    margin-bottom: 20px;
 }
 
-.price{
-    color:#27ae60;
-    font-size:28px;
-    font-weight:700;
-    margin:15px 0;
+.about-text p {
+    margin-bottom: 15px;
+    color: #555;
 }
 
-.contact{
-    background:#0a2540;
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+.about-points {
+    margin-top: 20px;
 }
 
-.contact a{
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 35px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:600;
+.about-points p {
+    margin-bottom: 8px;
 }
 
-footer{
-    background:#061829;
-    color:#ccc;
-    text-align:center;
-    padding:25px;
+/* FEATURES */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
 }
 
-@media(max-width:768px){
-
-.hero h1{
-    font-size:38px;
+.feature-box {
+    text-align: center;
+    background: white;
+    padding: 35px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.07);
+    transition: .3s;
 }
 
-.hero p{
-    font-size:18px;
+.feature-box:hover {
+    transform: translateY(-5px);
 }
 
-.nav-links{
-    display:none;
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
+.feature-box h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
 }
+
+/* PACKAGES */
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+}
+
+.package {
+    background: white;
+    border-radius: 15px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.package:hover {
+    transform: translateY(-5px);
+}
+
+.package h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #219653;
+    font-size: 29px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.package ul {
+    padding-left: 20px;
+    margin: 15px 0;
+    color: #666;
+}
+
+.package .btn {
+    margin-top: 15px;
+}
+
+/* PACKAGE DETAILS */
+
+.package-details {
+    display: none;
+    background: #f1f5fa;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.package-details.active {
+    display: block;
+}
+
+/* ENQUIRY FORM */
+
+.enquiry {
+    background: #eef4ff;
+}
+
+.enquiry-form {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.08);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 7px;
+    color: var(--navy);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--navy);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.enquiry-form .btn {
+    width: 100%;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin-bottom: 15px;
+}
+
+.contact .btn {
+    background: var(--green);
+    color: white;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--dark);
+    color: #ccc;
+    padding: 55px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.footer-logo {
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+footer a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 9px;
+    transition: .3s;
+}
+
+footer a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid #344454;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+    z-index: 999;
+    transition: .3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 79px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 5%;
+        gap: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,.15);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        margin: 0;
+    }
+
+    .nav-book {
+        display: inline-block;
+        width: fit-content;
+        padding: 10px 18px !important;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:550px) {
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero h1 {
+        font-size: 33px;
+    }
+
+    .hero .btn {
+        margin: 8px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .enquiry-form {
+        padding: 22px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 <div class="container">
 <nav>
 
-<div class="logo">TourCaptain</div>
+<a href="#home" class="logo">
+<img src="https://raw.githubusercontent.com/mytourcaptain-design/tourcaptain/main/Tour%20Captain%20Travel%20Agency%20logo.jpeg" alt="TourCaptain Logo">
+<span>TourCaptain</span>
+</a>
 
-<div class="nav-links">
-<a href="#">Home</a>
+<button class="menu-toggle" id="menuToggle"
+aria-label="Open navigation menu"
+aria-expanded="false"
+aria-controls="navLinks">
+☰
+</button>
+
+<div class="nav-links" id="navLinks">
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#about">About Us</a>
 <a href="#packages">Packages</a>
-<a href="#">Destinations</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+<a href="#enquiry">Booking Enquiry</a>
+<a href="#contact" class="nav-book">Contact Us</a>
 </div>
 
 </nav>
 </div>
 </header>
 
-<section class="hero">
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+<div class="hero-content">
 
 <h1>Explore More, Spend Less</h1>
 
 <p>Your Trusted Travel Companion for Unforgettable Adventures</p>
 
-<a href="#packages" class="btn">View Packages</a>
+<a href="#packages" class="btn">Explore Packages</a>
 
+<a href="#enquiry" class="btn btn-outline">Plan Your Trip</a>
+
+</div>
 </section>
 
-<section class="section">
+<!-- DESTINATIONS -->
 
+<section class="section" id="destinations">
 <div class="container">
 
 <h2 class="section-title">Popular Destinations</h2>
+<p class="section-subtitle">Discover beautiful places and unforgettable experiences.</p>
 
 <div class="destinations">
 
 <div class="card">
-<img src="https://raw.githubusercontent.com/mytourcaptain-design/tourcaptain/main/Darjeeling_1.avif" alt="Darjeeling">
+<img src="https://raw.githubusercontent.com/mytourcaptain-design/tourcaptain/main/Darjeeling_1.avif" alt="Darjeeling holiday destination">
 <div class="card-content">
 <h3>Darjeeling</h3>
 <p>Tea Gardens • Toy Train • Himalayas</p>
@@ -261,7 +695,7 @@ footer{
 </div>
 
 <div class="card">
-<img src="https://raw.githubusercontent.com/mytourcaptain-design/tourcaptain/main/Sikkim_1.jpg" alt="Sikkim">
+<img src="https://raw.githubusercontent.com/mytourcaptain-design/tourcaptain/main/Sikkim_1.jpg" alt="Sikkim holiday destination">
 <div class="card-content">
 <h3>Sikkim</h3>
 <p>Mountains • Monasteries • Lakes</p>
@@ -269,7 +703,7 @@ footer{
 </div>
 
 <div class="card">
-<img src="https://raw.githubusercontent.com/mytourcaptain-design/tourcaptain/main/Kasmir_1.jpg" alt="Kashmir">
+<img src="https://raw.githubusercontent.com/mytourcaptain-design/tourcaptain/main/Kasmir_1.jpg" alt="Kashmir holiday destination">
 <div class="card-content">
 <h3>Kashmir</h3>
 <p>Paradise on Earth</p>
@@ -277,94 +711,388 @@ footer{
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-<section class="section" style="background:#eef4ff;">
+<!-- ABOUT US -->
 
+<section class="section about" id="about">
+<div class="container">
+
+<div class="about-content">
+
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900" alt="Beautiful mountain travel destination">
+</div>
+
+<div class="about-text">
+
+<h2>About TourCaptain</h2>
+
+<p>
+Welcome to <strong>TourCaptain</strong> – your trusted travel companion for exploring incredible destinations.
+</p>
+
+<p>
+We believe that travel should be exciting, comfortable and affordable. Our aim is to help travellers discover beautiful destinations through carefully planned and budget-friendly travel packages.
+</p>
+
+<p>
+Whether you are planning a family holiday, a romantic getaway or an adventure trip, we are here to help make your journey memorable.
+</p>
+
+<div class="about-points">
+<p>✓ Affordable travel packages</p>
+<p>✓ Personalized travel planning</p>
+<p>✓ Customer-focused assistance</p>
+<p>✓ Memorable travel experiences</p>
+</div>
+
+<a href="#enquiry" class="btn">Plan Your Journey</a>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="section">
 <div class="container">
 
 <h2 class="section-title">Why Choose TourCaptain?</h2>
+<p class="section-subtitle">Making every journey comfortable and memorable.</p>
 
 <div class="features">
 
 <div class="feature-box">
+<div class="feature-icon">💰</div>
 <h3>Best Prices</h3>
 <p>Competitive and affordable travel packages.</p>
 </div>
 
 <div class="feature-box">
+<div class="feature-icon">🤝</div>
 <h3>Trusted Service</h3>
-<p>Dedicated support before and during your trip.</p>
+<p>Dedicated assistance before and during your trip.</p>
 </div>
 
 <div class="feature-box">
+<div class="feature-icon">🌍</div>
 <h3>Customized Tours</h3>
-<p>Travel plans tailored to your needs.</p>
+<p>Travel plans tailored to your requirements.</p>
 </div>
 
 <div class="feature-box">
-<h3>24×7 Assistance</h3>
-<p>Support whenever you need it.</p>
+<div class="feature-icon">📞</div>
+<h3>Customer Support</h3>
+<p>Friendly assistance for your travel enquiries.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-<section class="section" id="packages">
+<!-- PACKAGES -->
 
+<section class="section" id="packages" style="background:#eef4ff;">
 <div class="container">
 
-<h2 class="section-title">Featured Packages</h2>
+<h2 class="section-title">Featured Tour Packages</h2>
+<p class="section-subtitle">Explore our popular holiday packages.</p>
 
 <div class="packages">
 
 <div class="package">
 <h3>Darjeeling Escape</h3>
+<p>Explore the Queen of Hills.</p>
 <div class="price">₹9,999</div>
 <p>3 Nights / 4 Days</p>
+
+<ul>
+<li>Hotel Accommodation</li>
+<li>Sightseeing</li>
+<li>Local Travel Assistance</li>
+</ul>
+
+<button class="btn" onclick="toggleDetails('darjeeling')">View Details</button>
+
+<div class="package-details" id="darjeeling">
+<strong>Package Highlights</strong>
+<p>Visit Tiger Hill, Batasia Loop, Ghoom Monastery and the beautiful tea gardens of Darjeeling.</p>
+<p><strong>Duration:</strong> 3 Nights / 4 Days</p>
+<p><strong>Price:</strong> Starting from ₹9,999 per person.</p>
+</div>
 </div>
 
 <div class="package">
 <h3>Beautiful Sikkim</h3>
+<p>Experience the beauty of the Himalayas.</p>
 <div class="price">₹14,999</div>
 <p>5 Nights / 6 Days</p>
+
+<ul>
+<li>Hotel Accommodation</li>
+<li>Mountain Sightseeing</li>
+<li>Local Travel Assistance</li>
+</ul>
+
+<button class="btn" onclick="toggleDetails('sikkim')">View Details</button>
+
+<div class="package-details" id="sikkim">
+<strong>Package Highlights</strong>
+<p>Explore Gangtok, Tsomgo Lake, monasteries and the breathtaking mountain scenery.</p>
+<p><strong>Duration:</strong> 5 Nights / 6 Days</p>
+<p><strong>Price:</strong> Starting from ₹14,999 per person.</p>
+</div>
 </div>
 
 <div class="package">
 <h3>Kashmir Paradise</h3>
+<p>Discover paradise on earth.</p>
 <div class="price">₹24,999</div>
 <p>6 Nights / 7 Days</p>
+
+<ul>
+<li>Hotel Accommodation</li>
+<li>Valley Sightseeing</li>
+<li>Local Travel Assistance</li>
+</ul>
+
+<button class="btn" onclick="toggleDetails('kashmir')">View Details</button>
+
+<div class="package-details" id="kashmir">
+<strong>Package Highlights</strong>
+<p>Experience Srinagar, Dal Lake, Gulmarg and the beautiful valleys of Kashmir.</p>
+<p><strong>Duration:</strong> 6 Nights / 7 Days</p>
+<p><strong>Price:</strong> Starting from ₹24,999 per person.</p>
+</div>
 </div>
 
 </div>
 
-</div>
+<p style="text-align:center;margin-top:25px;color:#777;font-size:13px;">
+*Prices are indicative and subject to availability, travel dates and final confirmation.
+</p>
 
+</div>
 </section>
 
-<section class="contact">
+<!-- BOOKING ENQUIRY FORM -->
 
-<h2>Plan Your Next Journey With TourCaptain</h2>
+<section class="section enquiry" id="enquiry">
+<div class="container">
 
-<p>Contact us now for personalized travel packages.</p>
+<h2 class="section-title">Plan Your Next Journey</h2>
+<p class="section-subtitle">Share your travel requirements. Our team will contact you.</p>
 
-<a href="https://wa.me/919477879131">
-Book on WhatsApp
+<form class="enquiry-form" id="bookingForm">
+
+<div class="form-grid">
+
+<div class="form-group">
+<label for="customerName">Full Name *</label>
+<input type="text" id="customerName" placeholder="Enter your name" required>
+</div>
+
+<div class="form-group">
+<label for="customerPhone">Mobile Number *</label>
+<input type="tel" id="customerPhone" placeholder="Enter mobile number" pattern="[0-9]{10}" maxlength="10" required>
+</div>
+
+<div class="form-group">
+<label for="destination">Preferred Destination *</label>
+<select id="destination" required>
+<option value="">Select Destination</option>
+<option>Darjeeling</option>
+<option>Sikkim</option>
+<option>Kashmir</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="travelDate">Expected Travel Date</label>
+<input type="date" id="travelDate">
+</div>
+
+<div class="form-group">
+<label for="travellers">Number of Travellers</label>
+<select id="travellers">
+<option>1 Person</option>
+<option>2 Persons</option>
+<option>3-5 Persons</option>
+<option>6-10 Persons</option>
+<option>More than 10</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="budget">Approximate Budget</label>
+<select id="budget">
+<option>Below ₹10,000</option>
+<option>₹10,000 - ₹20,000</option>
+<option>₹20,000 - ₹40,000</option>
+<option>Above ₹40,000</option>
+</select>
+</div>
+
+<div class="form-group full-width">
+<label for="message">Additional Requirements</label>
+<textarea id="message" placeholder="Tell us about your travel requirements..."></textarea>
+</div>
+
+<div class="full-width">
+<button type="submit" class="btn">Submit Enquiry on WhatsApp</button>
+</div>
+
+</div>
+</form>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Ready for Your Next Adventure?</h2>
+
+<p>Contact TourCaptain today for personalized travel packages.</p>
+
+<p>📞 +91 94778 79131</p>
+
+<a href="https://wa.me/919477879131?text=Hello%20TourCaptain%2C%20I%20am%20interested%20in%20your%20travel%20packages."
+class="btn" target="_blank" rel="noopener">
+Chat on WhatsApp
 </a>
 
 </section>
 
+<!-- PROFESSIONAL FOOTER -->
+
 <footer>
+<div class="container">
 
-<p>© 2026 TourCaptain | All Rights Reserved</p>
+<div class="footer-grid">
 
+<div>
+<div class="footer-logo">TourCaptain</div>
+<p>Explore More, Spend Less.</p>
+<p>Your trusted travel companion for affordable holidays and unforgettable adventures.</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#about">About Us</a>
+<a href="#packages">Tour Packages</a>
+<a href="#enquiry">Booking Enquiry</a>
+</div>
+
+<div>
+<h3>Contact Us</h3>
+<p>📞 +91 94778 79131</p>
+<a href="https://wa.me/919477879131" target="_blank" rel="noopener">WhatsApp</a>
+<a href="#enquiry">Send an Enquiry</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 TourCaptain | All Rights Reserved.</p>
+<p>Explore More, Spend Less.</p>
+</div>
+
+</div>
 </footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a href="https://wa.me/919477879131?text=Hello%20TourCaptain%2C%20I%20need%20travel%20assistance."
+class="whatsapp-float"
+target="_blank"
+rel="noopener"
+aria-label="Chat with TourCaptain on WhatsApp">
+✆
+</a>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// MOBILE MENU
+
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', function() {
+    const isOpen = navLinks.classList.toggle('active');
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuToggle.setAttribute('aria-label',
+        isOpen ? 'Close navigation menu' : 'Open navigation menu');
+});
+
+// CLOSE MENU AFTER CLICKING A LINK
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+        menuToggle.textContent = '☰';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    });
+});
+
+// PACKAGE DETAILS
+
+function toggleDetails(id) {
+    const details = document.getElementById(id);
+    details.classList.toggle('active');
+}
+
+// BOOKING FORM - WHATSAPP SUBMISSION
+
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById('customerName').value.trim();
+    const phone = document.getElementById('customerPhone').value.trim();
+    const destination = document.getElementById('destination').value;
+    const date = document.getElementById('travelDate').value || 'Not specified';
+    const travellers = document.getElementById('travellers').value;
+    const budget = document.getElementById('budget').value;
+    const message = document.getElementById('message').value.trim() || 'None';
+
+    const whatsappMessage =
+`Hello TourCaptain!
+
+I would like to enquire about a travel package.
+
+Name: ${name}
+Mobile: ${phone}
+Destination: ${destination}
+Travel Date: ${date}
+Travellers: ${travellers}
+Budget: ${budget}
+
+Additional Requirements:
+${message}
+
+Please contact me with the package details. Thank you!`;
+
+    const whatsappURL =
+        'https://wa.me/919477879131?text=' +
+        encodeURIComponent(whatsappMessage);
+
+    window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+
+});
+
+</script>
 
 </body>
 </html>
