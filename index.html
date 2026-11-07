@@ -205,6 +205,92 @@ nav {
     margin-left: 10px;
 }
 
+/*Add this part later*/
+
+
+<!-- TOURCAPTAIN TRAVEL SERVICES -->
+
+<section class="section services" id="services">
+<div class="container">
+
+<h2 class="section-title">Our Travel Services</h2>
+
+<p class="section-subtitle">
+Everything you need for a perfect journey, all in one place.
+</p>
+
+<div class="service-grid">
+
+<div class="service-card" id="service-flights">
+    <div class="service-icon">✈️</div>
+    <h3>Flight Booking</h3>
+    <p>Domestic and international flight booking assistance at competitive fares.</p>
+    <a href="#enquiry" onclick="selectService('Flights')">Book Your Flight →</a>
+</div>
+
+<div class="service-card" id="service-hotels">
+    <div class="service-icon">🏨</div>
+    <h3>Hotels</h3>
+    <p>Find comfortable hotels and accommodation for your next trip.</p>
+    <a href="#enquiry" onclick="selectService('Hotels')">Find Hotels →</a>
+</div>
+
+<div class="service-card" id="service-homestays">
+    <div class="service-icon">🏡</div>
+    <h3>Villas & Homestays</h3>
+    <p>Discover peaceful homestays, villas and unique holiday stays.</p>
+    <a href="#enquiry" onclick="selectService('Villas & Homestays')">Explore Stays →</a>
+</div>
+
+<div class="service-card" id="service-holidays">
+    <div class="service-icon">🌴</div>
+    <h3>Holiday Packages</h3>
+    <p>Customized family holidays, honeymoon trips and group tours.</p>
+    <a href="#enquiry" onclick="selectService('Holiday Packages')">Explore Packages →</a>
+</div>
+
+<div class="service-card" id="service-trains">
+    <div class="service-icon">🚆</div>
+    <h3>Train Tickets</h3>
+    <p>Railway ticket booking assistance through authorised booking channels.</p>
+    <a href="#enquiry" onclick="selectService('Train Tickets')">Enquire Now →</a>
+</div>
+
+<div class="service-card" id="service-buses">
+    <div class="service-icon">🚌</div>
+    <h3>Bus Tickets</h3>
+    <p>Explore bus travel options for convenient journeys.</p>
+    <a href="#enquiry" onclick="selectService('Bus Tickets')">Book Bus →</a>
+</div>
+
+<div class="service-card" id="service-cabs">
+    <div class="service-icon">🚕</div>
+    <h3>Cab Services</h3>
+    <p>Local, airport and outstation cab booking assistance.</p>
+    <a href="#enquiry" onclick="selectService('Cab Services')">Book a Cab →</a>
+</div>
+
+<div class="service-card" id="service-forex">
+    <div class="service-icon">💳</div>
+    <h3>Forex Card & Currency</h3>
+    <p>Enquire about foreign currency and travel forex solutions.</p>
+    <a href="#enquiry" onclick="selectService('Forex Card & Currency')">Forex Enquiry →</a>
+</div>
+
+<div class="service-card" id="service-insurance">
+    <div class="service-icon">🛡️</div>
+    <h3>Travel Insurance</h3>
+    <p>Enquire about travel insurance options for domestic and international trips.</p>
+    <a href="#enquiry" onclick="selectService('Travel Insurance')">Get Insurance Details →</a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+/*Close this part later*/
+
 /* DESTINATIONS */
 
 .destinations {
@@ -663,16 +749,16 @@ aria-controls="navLinks">
 <!-- HERO SECTION -->
 
 <section class="hero" id="home">
-<div class="hero-content">
-
-<h1>Explore More, Spend Less</h1>
-
-<p>Your Trusted Travel Companion for Unforgettable Adventures</p>
-
-<a href="#packages" class="btn">Explore Packages</a>
-
-<a href="#enquiry" class="btn btn-outline">Plan Your Trip</a>
-
+<div class="nav-links" id="navLinks">
+    <a href="#service-flights">✈ Flights</a>
+    <a href="#service-hotels">🏨 Hotels</a>
+    <a href="#service-homestays">🏡 Villas & Homestays</a>
+    <a href="#service-holidays">🌴 Holiday Packages</a>
+    <a href="#service-trains">🚆 Trains</a>
+    <a href="#service-buses">🚌 Buses</a>
+    <a href="#service-cabs">🚕 Cabs</a>
+    <a href="#service-forex">💳 Forex</a>
+    <a href="#service-insurance">🛡 Travel Insurance</a>
 </div>
 </section>
 
